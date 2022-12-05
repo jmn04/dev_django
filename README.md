@@ -1,6 +1,4 @@
-# dev_django
-
-Web App by Django
+# Web application development with Django
 
 To run it, enter the following command under the django project folder first.<br>
 $ python manage.py migrate<br>
