@@ -11,20 +11,20 @@
         <header style="margin-bottom: 2rem;">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="{% static 'myapp:index' %}" style="font-size: 32px;">Navbar</a>
+                  <a class="navbar-brand" href="{% url 'myapp:index' %}" style="font-size: 32px;">Django</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{% static 'myapp:index' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'myapp:index' %}">トップ</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Post</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'myapp:note_input' %}">投稿</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">List</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'myapp:note_list' %}">一覧</a>
                       </li>
                     </ul>
                   </div>
