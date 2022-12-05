@@ -2,9 +2,9 @@
 
 Web App by Django
 
-To run it, enter the following command under the django project folder first.　　
-$ python manage.py migrate　　
-$ python manage.py makemigrations　　
-　　
-※This is only for those who have not created a super user　　
-$ python manage.py createsuperuser　　
+To run it, enter the following command under the django project folder first.<br>
+$ python manage.py migrate<br>
+$ python manage.py makemigrations<br>
+<br>
+※This is only for those who have not created a super user.<br>
+$ python manage.py createsuperuser<br>
