@@ -1,0 +1,55 @@
+{% load static %}
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <title>メモ・アプリケーション</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <header style="margin-bottom: 2rem;">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="{% static 'myapp:index' %}" style="font-size: 32px;">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{% static 'myapp:index' %}">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Post</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">List</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+        </header>
+        <div id="wrapper" style="width: 50%; margin: 0 auto;">
+            <p>Created at：{{ object.created_at|date:"y/n/j H:i:s T" }}</p>
+            <p>Updated at：{{ object.updated_at|date:"y/n/j H:i:s T" }}</p>
+            {% if object.image %}
+            <img src="{{ object.image.url }}" style="max-width: 100%;">
+            {% endif %}
+            <h1 class="display-5">{{ object.title }}</h1>
+            {% comment %} <p>{{ object.image }}</p> {% endcomment %}
+            <p>{{ object.text }}</p>
+
+            {% comment %} <a href="{% url 'myapp:note_update' object.pk %}">編集</a>
+            <a href="{% url 'myapp:note_delete' object.pk %}">削除</a>
+            <a href="{% url 'myapp:index' %}">戻る</a> {% endcomment %}
+
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3" onclick="location.href='{% url 'myapp:note_update' object.pk %}'">編集</button>
+                <button type="submit" class="btn btn-primary mb-3" onclick="location.href='{% url 'myapp:note_delete' object.pk %}'">削除</button>
+                <button type="submit" class="btn btn-primary mb-3" onclick="location.href='{% url 'myapp:note_list' %}'">戻る</button>
+            </div>
+        </div>
+    </body>
+</html>

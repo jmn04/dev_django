@@ -1,0 +1,14 @@
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>メモの削除</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p>{{ object.created_at }} {{ object.title }} を削除します</p>
+            <input type="submit" value"削除">
+        </form>
+    </body>
+</html>

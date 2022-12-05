@@ -1,0 +1,36 @@
+@charset 'utf-8';
+
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+} */
+
+#wrapper {
+    /* position: relative; */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+main {
+    width: 75%;
+    margin: 0 auto;
+}
+
+footer {
+    /* position: absolute;
+    bottom: ; */
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+}
