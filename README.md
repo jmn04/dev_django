@@ -1,4 +1,4 @@
-# Note-taking application　(+ image posting function) development by Django
+# Note-taking application (+image posting function) development by Django
 
 To run it, enter the following command under the django project folder first.<br>
 $ python manage.py migrate<br>
