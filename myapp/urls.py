@@ -1,6 +1,4 @@
 from . import tests
-from . import blog
-from . import flatpages
 from django.urls import path
 from . import views
 
@@ -9,8 +7,6 @@ from . import views
 app_name = 'myapp'
 urlpatterns = [
     path('', tests.test, name='test'),
-    path('blog/', blog.blog, name='blog'),
-    path('flatpages/', flatpages.flatpages, name='flatpages'),
     path('index/', views.NoteIndexView.as_view(), name='index'),
     path('myapp/create/', views.NoteCreateView.as_view(), name='note_input'),
     path('myapp/create/complete/', views.NoteInputCompleteView.as_view(), name='note_input_complete'),

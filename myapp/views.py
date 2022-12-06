@@ -8,7 +8,6 @@ from django.views.generic import UpdateView
 from django.views.generic import DeleteView
 from .forms import NoteForm
 from .models import NoteTable
-from django.shortcuts import get_object_or_404
 from django.utils import timezone
 import cgi
 
@@ -49,17 +48,6 @@ class NoteDeleteView(DeleteView):
     model = NoteTable
     success_url = reverse_lazy('myapp:note_list')
 
-# def index(request):
-#     notes = NoteTable.objects.all().order_by('-updated_datetime')
-#     return render(request, 'myapp/templates/index.html', { 'notes': notes })
-
-# def note_input(request):
-#     return render(request, 'myapp/templates/note_input.html')
-
-# def note_input_complete(request, note_id):
-#     note = get_object_or_404(NoteTable, id=note_id)
-#     return render(request, 'myapp/templates/note_input_complete.html', {'note': note})
-
 
 #自作
 def memoCreateView(request):
@@ -72,8 +60,6 @@ def memoCreateView(request):
         image = request.POST["image"]
         if request.FILES:
             image = request.FILES.get("image")
-        # content = request.POST["content"]
 
-    #受け取った値で必要な処理を行います
-        
+    #受け取った値で必要な処理を行う     
     return render(request, template_name)
