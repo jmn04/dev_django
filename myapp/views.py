@@ -47,6 +47,7 @@ class NoteDeleteView(DeleteView):
     template_name = 'note_delete.html'
     model = NoteTable
     success_url = reverse_lazy('myapp:note_list')
+    
 
 
 #自作
@@ -63,3 +64,9 @@ def memoCreateView(request):
 
     #受け取った値で必要な処理を行う     
     return render(request, template_name)
+
+# def imageDeleteView(request):
+#     template_name = "note_delete.html"
+#     if request.POST:
+#         request.FILES.delete("image")
+#     return render(request, template_name)
