@@ -3,9 +3,10 @@
 <html lang="ja">
     <head>
         <meta caarset="UTF-8">
-        <title>メモ・アプリケーション</title>
         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/input.css' %}">
+        <title>投稿完了</title>
     </head>
     <body>
         <div id="wrapper">
@@ -33,10 +34,10 @@
                 </nav>
             </header>
             <main>
-                <p>メモの書き込みが完了しました！</p>
+                <p class="display-6">メモの書き込みが完了しました！</p>
                 <a class="btn btn-primary" href="{% url 'myapp:index' %}">トップへ戻る</a>
             </main>
-            <footer class="text-light bg-dark" style="position: absolute; bottom: 0;">
+            <footer class="text-light bg-dark">
                 <small style="">Copyright&copy; HAL. All Rights Reserved.</small>
             </footer>
         </div>

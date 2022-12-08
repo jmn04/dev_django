@@ -10,10 +10,15 @@ function handleFileSelect(event) {
     var f = files[0]
 	reader.onload = (function(theFile) {
 		return function(event) {
+			// styleHeightの値に合わせて、footer.style.bottomを変更のこと。
+			var styleHeight = "500px";
+			var footer = document.getElementsByTagName("footer").item(0);
 			var preview = document.createElement('div');
+
 			preview.classList.add('d-block');
-			preview.innerHTML = ['<img class="img-thumbnail d-block mx-auto" src="', event.target.result,'" title="', escape(theFile.name), '" style="width:100%" /><div class="small text-muted text-center">', escape(theFile.name),'</div>'].join('');// 画像では画像のプレビューとファイル名の表示
+			preview.innerHTML = ['<img class="img-thumbnail d-block mx-auto" src="', event.target.result,'" title="', escape(theFile.name), '" style="height: styleHeight;" /><div class="small text-muted text-center">', escape(theFile.name),'</div>'].join('');// 画像では画像のプレビューとファイル名の表示
             document.getElementById('preview').appendChild(preview);
+			footer.style.bottom=`calc(-${styleHeight} - ${parseInt(footer.clientHeight) + 'px'})`;
         };
     })(f);
     reader.readAsDataURL(f);

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/input.css' %}">
-    <title>メモ・アプリケーション</title>
+    <title>投稿</title>
 </head>
 
 <body>
@@ -15,10 +15,10 @@
     <div id="wrapper">
 
         <!-- header -->
-        <header style="margin-bottom: 2rem;">
+        <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#" style="font-size: 32px;">Navbar</a>
+                    <a class="navbar-brand" href="{% url 'myapp:index' %}" style="font-size: 32px;">Django</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -41,7 +41,7 @@
 
         <!-- main -->
         <main>
-            <form id="form-area" class="was-validated" method="post" enctype="multipart/form-data" style="width: 70%; margin: 0 auto;">
+            <form id="form-area" class="was-validated" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="was-validated">
                     <div class="mb-3">
@@ -91,7 +91,6 @@
             <small style="">Copyright&copy; HAL. All Rights Reserved.</small>
         </footer>
     </div>
-
     
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
