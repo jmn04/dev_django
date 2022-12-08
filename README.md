@@ -10,4 +10,3 @@ $ python manage.py createsuperuser<br>
 CSS and JavaScript used are...<br>
 CSS : bootstrap.min.css, style.css,<br>
 JS : bootstrap.min.js<br>
-Other files are not linked, so there is no problem to delete them.<br>
