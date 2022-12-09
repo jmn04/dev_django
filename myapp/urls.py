@@ -14,13 +14,4 @@ urlpatterns = [
     path('myapp/detail/<uuid:pk>/', views.NoteDetailView.as_view(), name='note_detail'),
     path('myapp/update/<uuid:pk>/', views.NoteUpdateView.as_view(), name='note_update'),
     path('myapp/delete/<uuid:pk>/', views.NoteDeleteView.as_view(), name='note_delete'),
-    # path('', views.NoteIndexView.as_view(), name='index'),
-    # path('', views.NoteCreateView.as_view(), name='note_input'),
-    # path('', views.NoteInputCompleteView.as_view(), name='note_input_complete'),
-    # path('', views.index, name='index'),
-    # path('', views.note_input, name='note_input'),
-    # path('', views.note_input_complete, name='note_input_complete'),
-    # path('',views.NoteIndexView.index(), name='index'),
-    # path('note_input', views.NoteCreateView.note_input(), name='note_input'),
-    # path('<int:id>', views.NoteInputCompleteView.note_input_complete(), name='note_input_complete')
 ]
