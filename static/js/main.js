@@ -17,7 +17,7 @@ function handleFileSelect(event) {
 
 			preview.classList.add('d-block');
 			preview.innerHTML = ['<img class="img-thumbnail d-block mx-auto" src="', event.target.result,'" title="', escape(theFile.name), '" style="height: styleHeight;" /><div class="small text-muted text-center">', escape(theFile.name),'</div>'].join('');// 画像では画像のプレビューとファイル名の表示
-           document.getElementById('preview').appendChild(preview);
+          document.getElementById('preview').appendChild(preview);
 			footer.style.bottom=`calc(-${styleHeight} - ${parseInt(footer.clientHeight) + 'px'})`;
         };
     })(f);
